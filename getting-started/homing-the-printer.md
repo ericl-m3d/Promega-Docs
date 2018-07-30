@@ -45,7 +45,7 @@ Follow the steps below to correctly home your printer.
 
 ## Tuning the Z-homing Procedure
 
-**Because the distance between the bed and the nozzle depends on your Promega configuration \(K'tana vs. Compound, Glass vs. no glass\). You will have to tune** _**machine\_zendstop.g**_ **for Z0 to line up.**
+**Because the distance between the bed and the nozzle depends on your Promega configuration \(K'tana vs. Compound, Glass vs. no glass\). You will have to tune** _**machine\_zendstop.g[^1]**_ **for Z0 to line up.**
 
 Ideally whenever you home the printer and send the command `G1 X0 Y0 Z0` \(telling the printer to go to \(0,0,0\)\) the print bed will touch the nozzle. However, as outlined above, the difference between the bed and the nozzle varies depending on your setup. Follow the steps below to update your _machine\_zendstop.g_ file.
 
@@ -63,4 +63,6 @@ Ideally whenever you home the printer and send the command `G1 X0 Y0 Z0` \(telli
 9. Save the file and home the printer again. Although you should now be able to enter the command `G1 Z0` , I don't recommend it. Manually jog your bed to the nozzle again to ensure that Z0 is when the bed is touching the nozzle.
 
 Continue on to the [Heating the Bed and Nozzles](https://m3d.gitbook.io/promega-docs/getting-started/heating-the-bed-and-nozzles), the next chapter in the [Getting Started](https://m3d.gitbook.io/promega-docs/getting-started) guide.
+
+[^1]: References to macro files are valid for the latest SD content.  If you do not see the noted files on your SD card, please refer to [Updating SD Card Structure](https://promega.printm3d.com/getting-started/updating-sd-card-structure) to update your printer as needed.
 
